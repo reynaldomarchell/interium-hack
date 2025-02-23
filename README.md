@@ -1,5 +1,7 @@
 # TransitPlus 🚃
 
+![transitplus](public/transitplus.png)
+
 TransitPlus adalah aplikasi berbasis web yang dirancang untuk memberikan pengalaman transportasi umum yang lebih interaktif dan menarik melalui fitur pengumpulan poin dan penukaran reward. Dengan TransitPlus, pengguna dapat mengumpulkan poin dari perjalanan menggunakan transportasi umum dan menukarkannya dengan berbagai hadiah menarik dari mitra yang bekerja sama. Aplikasi ini bertujuan untuk meningkatkan minat masyarakat dalam menggunakan transportasi umum serta mendukung gaya hidup yang lebih ramah lingkungan.
 
 ### Live Website

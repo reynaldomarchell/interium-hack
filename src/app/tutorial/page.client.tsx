@@ -79,7 +79,7 @@ const fadeIn = {
   transition: { duration: 0.3 },
 } as const;
 
-export default function TutorialPageClient(): JSX.Element {
+export default function TutorialPageClient(): React.JSX.Element {
   const router = useRouter();
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [currentStep, setCurrentStep] = useState<StepKey>("select-transport");
@@ -109,7 +109,7 @@ export default function TutorialPageClient(): JSX.Element {
     }
   };
 
-  const renderLeftComponent = (step: StepKey): JSX.Element | null => {
+  const renderLeftComponent = (step: StepKey): React.JSX.Element | null => {
     switch (step) {
       case "select-transport":
         return (
@@ -127,7 +127,7 @@ export default function TutorialPageClient(): JSX.Element {
     }
   };
 
-  const renderRightComponent = (step: StepKey): JSX.Element | null => {
+  const renderRightComponent = (step: StepKey): React.JSX.Element | null => {
     switch (step) {
       case "select-transport":
         return <TransportSliderImage selectedIndex={selectedIndex} />;

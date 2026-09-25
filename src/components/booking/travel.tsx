@@ -343,7 +343,7 @@ export function TravelCard() {
                             mode="single"
                             selected={field.value}
                             onSelect={field.onChange}
-                            initialFocus
+                            autoFocus
                           />
                         </PopoverContent>
                       </Popover>

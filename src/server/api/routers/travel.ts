@@ -6,7 +6,6 @@ import { generateObject } from "ai";
 
 const openai = createOpenAI({
     apiKey: env.OPENAI_KEY,
-    compatibility: "strict",
 })
 export const travelRouter = createTRPCRouter({
     getDistance: publicProcedure
@@ -15,7 +14,7 @@ export const travelRouter = createTRPCRouter({
             const { start_destination, end_destination } = input;
 
             const result = await generateObject({
-                model: openai("gpt-4o-mini", { structuredOutputs: true }),
+                model: openai.chat("gpt-4o-mini"),
                 schemaName: "travel",
                 schemaDescription: "Calculate the distance between two destinations",
                 schema: z.object({
@@ -26,6 +25,6 @@ export const travelRouter = createTRPCRouter({
                 prompt: `Calculate the distance between ${start_destination} and ${end_destination}, just estimate it and return in km`,
             })
 
-            return result;
+            return { object: result.object };
         })
 })
